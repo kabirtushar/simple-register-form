@@ -3,10 +3,6 @@
 require_once 'connection.php';
 
 
-
-
-
-
 if(isset($_POST['form1'])){
     try{
     
@@ -19,8 +15,6 @@ if(isset($_POST['form1'])){
             throw new Exception('Password can not be empty');
         }
         
-        
-        
         $username = $_POST[ 'name' ];
         $password = $_POST[ 'password' ];
         
@@ -31,24 +25,15 @@ if(isset($_POST['form1'])){
         $PDOstatement->execute();
         header('Location: logout.php');
         
-        
     }
     catch(Exception $e){
 
     $error = $e->getMessage();
     echo $error;
+    }
 }
-
-
-}
-
-
-
-
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
